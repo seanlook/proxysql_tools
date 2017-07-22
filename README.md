@@ -1,12 +1,5 @@
-http://seanlook.com/2017/07/16/mysql-proxysql-monitor/
+Ref: http://seanlook.com/2017/07/16/mysql-proxysql-monitor/
 
-title: ProxySQL监控方案
-date: 2017-07-16 21:32:49
-tags: [mysql, 中间件, proxysql]
-categories:
-- MySQL
-updated: 2017-07-18 21:32:49
----
 
 ProxySQL能监控的信息不多，而且大部分是统计信息，不是性能数据。
 
@@ -62,7 +55,7 @@ mysql> show tables from stats;
 
 
 
-在我们的环境下使用的是 InfluxDB + Grafana，通过telegraf收集上报。上述所有的监控脚本见gitlab仓库 http://git.workec.com/ops/proxysql_tools/tree/master/monitor ：
+在我们的环境下使用的是 InfluxDB + Grafana，通过telegraf收集上报。上述所有的监控脚本见本仓库。
 
 - `proxysql_stats.py`:
     - 收集 stats_mysql_global 和 stats_mysql_connection_pool 中的信息，打印出 influxdb 数据上报格式
